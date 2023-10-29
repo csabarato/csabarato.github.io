@@ -4,7 +4,6 @@ import {DataTableModel} from "../model/data-table.model";
 import {PickModel} from "../model/pick.model";
 import {FormControl} from "@angular/forms";
 import {MatTableDataSource} from "@angular/material/table";
-import {identity} from "rxjs";
 
 
 @Component({

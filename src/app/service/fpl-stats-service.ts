@@ -11,7 +11,7 @@ export class FplStatsService {
   private picksReqUrl = 'https://csarato.pythonanywhere.com'
   constructor(private http: HttpClient) {}
   getDataTable(): Observable<DataTableModel> {
-    return this.http.get(this.picksReqUrl)
+    return this.http.get(this.picksReqUrl+'/get_picks_table')
       .pipe(
         map((result) => JSON.parse(JSON.stringify(result)) as DataTableModel),
       )
