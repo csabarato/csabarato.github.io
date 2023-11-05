@@ -81,11 +81,16 @@ export class StatsPageComponent implements OnInit {
     return queriedIds;
   }
 
+  isPickExistForPlayer(picks: PickModel[], playerId: string) {
+    return picks.some((pick) => pick.player_id == parseInt(playerId))
+  }
+
   getCellData(multiplier: number): string {
     switch (multiplier) {
         case 0: return "Kispad";
         case 1: return "Kezdő";
         case 2: return "Kapitány";
+        case 3: return "Kapitány (3x)";
         default: return "";
     }
   }
